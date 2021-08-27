@@ -19,7 +19,7 @@ export default function App(){
     if (validate()) {
       return;
     }
-
+//-----------variaveis auxiliares-------------------------
     var auxHeight = height.replace(/,/gi, '.');
     var auxWeight = weight.replace(/,/gi, '.');
     var auxImc = auxWeight / (auxHeight * auxHeight);
@@ -34,6 +34,7 @@ export default function App(){
    * 
    * @returns 
    */
+  //------------------função de validação de peso e altura--------------------------
   function validate() {
     if (weight.trim().length === 0) {
       Alert.alert("Opa!", `Informe o Peso(kg).`);
@@ -122,7 +123,7 @@ export default function App(){
             style={styles.input}
             fontSize={15}
             value={height}
-            keyboardType='numeric'  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            keyboardType='numeric'  
             onChangeText={setHeight}
             placeholder='Informe sua altura...'>
           </TextInput>
@@ -176,7 +177,9 @@ const styles = StyleSheet.create({
   },
   labelIntput: {
     fontSize: 20,
-    color: '#000'
+    color: '#000',
+    fontfamily: 'serif'
+    
   },
   input: {
     borderWidth: 4,
